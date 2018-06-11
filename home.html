@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+   <body>
+   
+     <!-- <h2><a href = "/enternew">Insert values</a></h2>
+      <h2><a href = "/list">Insert values</a></h2>-->
+      Search for earthquakes occured with a magnitude greater than the entered magnitude
+       <form action="{{url_for('GreatMag')}}" method="POST" enctype="multipart/form-data">
+         <input type="text" value="" name="GreatMag" placeholder="Enter Grade">
+         <input type="submit" value="Grade">
+      </form>
+       <table border = 1>
+         <thead>
+            <td>Earthquakes</td>
+
+         </thead>
+         {% for row in rows %}
+         <tr>
+            <td>{{row["mag"]}}</td>
+          </tr>
+         {% endfor %}
+         </table>
+
+   </body>
+</html>
