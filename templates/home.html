@@ -107,14 +107,14 @@
          </table>
 
         ==================================================================================================================================
-      <p>Search for earthquakes occured with a magnitude greater than the entered magnitude for the past 4 days</p>
+      <p>Search for earthquakes nearest to a specified location</p>
        <form action="{{url_for('Radius')}}" method="POST" enctype="multipart/form-data">
          <input type="text" value="" name="LatCoord" placeholder="Enter Latitude">
           <input type="text" value="" name="LongCoord" placeholder="Enter Longitude">
            <input type="text" value="" name="Dist" placeholder="Enter Distance">
          <input type="submit" value="Calculate">
       </form>
-		 <p> Number of earthquakes that has greater magnitude {{count}}</p>
+		 <p> Number of earthquakes nearest to the specified location {{count}}</p>
        <!--<table border = 1>-->
          <!--<thead>-->
 

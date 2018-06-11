@@ -1,3 +1,4 @@
+--find-links wheelhouse
 scipy
 pandas
 Flask==0.12.1

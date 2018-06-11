@@ -1,7 +1,3 @@
-# # import uuid
-# # from numpy import vstack,array
-# from scipy.cluster.vq import *
-import pandas
 import pandas as pd
 import math
 from math import sin, cos, sqrt, atan2, radians
@@ -55,14 +51,6 @@ def Radius():
     con = sqll.connect("Assign2.db")
     con.row_factory = sqll.Row
     cur = con.cursor()
-    # cur.execute("SELECT mag FROM EarthQuake1 WHERE math.acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos("
-    #             "longitude - (?))) * 6371 <= ?",(LatCoord,LatCoord,LongCoord,Distance))
-    # Query='SELECT mag FROM EarthQuake1 WHERE math.acos(sin('+LatCoord+') * sin(latitude) + cos('+LatCoord+') * cos(latitude) * cos(longitude - ('+LongCoord+'))) * 6371 <= '+Distance+';'
-    # Query = 'SELECT mag FROM EarthQuake1 WHERE (math.acos(sin(' + LatCoord + ') * sin(lat_rad) + cos(' + LatCoord + ') * cos(lat_rad) * cos(long_rad - (' + LongCoord + '))))* 6371 <= '+Distance+';'
-
-    # cur.execute('SELECT mag FROM EarthQuake1 WHERE math.sin(lat_rad) >'+Distance+';')
-    # cur.execute('SELECT mag FROM EarthQuake1 where latitude =' + LatCoord + ';')
-    # cur.execute('SELECT mag FROM EarthQuake1 where latitude like \'%' + LatCoord + '%\';')
     cur.execute('SELECT * FROM EarthQuake1')
     rows = cur.fetchall()
     ct=0

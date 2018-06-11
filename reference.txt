@@ -1,0 +1,2 @@
+Assign2 reference
+https://stackoverflow.com/questions/41900593/csv-into-sqlite-table-python

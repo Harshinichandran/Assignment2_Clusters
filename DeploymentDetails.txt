@@ -1,0 +1,110 @@
+harshini_chandrasekar@Azure:~$ az appservice plan create --name myAppServicePlan --resource-group Assign2ResourceGroup --sku FREE
+{
+  "adminSiteName": null,
+  "appServicePlanName": "myAppServicePlan",
+  "geoRegion": "West Europe",
+  "hostingEnvironmentProfile": null,
+  "id": "/subscriptions/6dc4427b-96e6-4e38-b4d9-d80bca8f13aa/resourceGroups/Assign2ResourceGroup/providers/Microsoft.Web/serverfarms/myAppServicePlan",
+  "isSpot": false,
+  "kind": "app",
+  "location": "West Europe",
+  "maximumNumberOfWorkers": 1,
+  "name": "myAppServicePlan",
+  "numberOfSites": 0,
+  "perSiteScaling": false,
+  "provisioningState": "Succeeded",
+  "reserved": false,
+  "resourceGroup": "Assign2ResourceGroup",
+  "sku": {
+    "capabilities": null,
+    "capacity": 0,
+    "family": "F",
+    "locations": null,
+    "name": "F1",
+    "size": "F1",
+    "skuCapacity": null,
+    "tier": "Free"
+  },
+  "spotExpirationTime": null,
+  "status": "Ready",
+  "subscription": "6dc4427b-96e6-4e38-b4d9-d80bca8f13aa",
+  "tags": null,
+  "targetWorkerCount": 0,
+  "targetWorkerSizeId": 0,
+  "type": "Microsoft.Web/serverfarms",
+  "workerTierName": null
+}
+harshini_chandrasekar@Azure:~$ az webapp create --resource-group Assign2ResourceGroup --plan myAppServicePlan --name Assign2Clusters --runtime "python|3.4" --deployment-local-git
+Local git is configured with url of 'https://Harshini6563@assign2clusters.scm.azurewebsites.net/Assign2Clusters.git'
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": true,
+  "clientCertEnabled": false,
+  "cloningInfo": null,
+  "containerSize": 0,
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "assign2clusters.azurewebsites.net",
+  "deploymentLocalGitUrl": "https://Harshini6563@assign2clusters.scm.azurewebsites.net/Assign2Clusters.git",
+  "enabled": true,
+  "enabledHostNames": [
+    "assign2clusters.azurewebsites.net",
+    "assign2clusters.scm.azurewebsites.net"
+  ],
+  "ftpPublishingUrl": "ftp://waws-prod-am2-191.ftp.azurewebsites.windows.net/site/wwwroot",
+  "hostNameSslStates": [
+    {
+      "hostType": "Standard",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "assign2clusters.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    },
+    {
+      "hostType": "Repository",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "assign2clusters.scm.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    }
+  ],
+  "hostNames": [
+    "assign2clusters.azurewebsites.net"
+  ],
+  "hostNamesDisabled": false,
+  "hostingEnvironmentProfile": null,
+  "httpsOnly": false,
+  "id": "/subscriptions/6dc4427b-96e6-4e38-b4d9-d80bca8f13aa/resourceGroups/Assign2ResourceGroup/providers/Microsoft.Web/sites/Assign2Clusters",
+  "identity": null,
+  "isDefaultContainer": null,
+  "kind": "app",
+  "lastModifiedTimeUtc": "2018-06-11T11:39:41.620000",
+  "location": "West Europe",
+  "maxNumberOfWorkers": null,
+  "name": "Assign2Clusters",
+  "outboundIpAddresses": "52.178.89.129,52.178.99.13,52.178.89.125,52.178.89.58,52.178.93.214",
+  "possibleOutboundIpAddresses": "52.178.89.129,52.178.99.13,52.178.89.125,52.178.89.58,52.178.93.214,52.178.88.88,52.178.88.193,52.178.88.34,52.138.175.243",
+  "repositorySiteName": "Assign2Clusters",
+  "reserved": false,
+  "resourceGroup": "Assign2ResourceGroup",
+  "scmSiteAlsoStopped": false,
+  "serverFarmId": "/subscriptions/6dc4427b-96e6-4e38-b4d9-d80bca8f13aa/resourceGroups/Assign2ResourceGroup/providers/Microsoft.Web/serverfarms/myAppServicePlan",
+  "siteConfig": null,
+  "slotSwapStatus": null,
+  "snapshotInfo": null,
+  "state": "Running",
+  "suspendedTill": null,
+  "tags": null,
+  "targetSwapSlot": null,
+  "trafficManagerHostNames": null,
+  "type": "Microsoft.Web/sites",
+  "usageState": "Normal"
+}
+harshini_chandrasekar@Azure:~$
